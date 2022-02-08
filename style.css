@@ -1,0 +1,217 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+}
+.schermo {
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  display: block;
+  justify-content: center;
+  background-color: rgb(30, 114, 201);
+  background: radial-gradient(
+    circle,
+    rgba(30, 114, 201, 1) 0%,
+    rgba(6, 19, 75, 1) 100%
+  );
+  box-shadow: 5px 5px 15px 25px #8b8b8b;
+}
+.titolo-gioco {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 2px solid #7072748f;
+  border-radius: 20px;
+  text-transform: uppercase;
+  width: 50%;
+  height: 20%;
+  padding: 15px;
+  align-items: center;
+  margin: 20px auto;
+  justify-content: space-around;
+}
+.titolo {
+  font-size: 35px;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  width: 65%;
+  margin-left: 0%;
+}
+
+.score {
+  border: 1px solid #fff;
+  height: auto;
+  margin-right: 0px;
+  border-radius: 20px;
+  display: block;
+  padding: 3%;
+  background-color: #fff;
+  width: 30%;
+  font-size: 18px;
+  text-align: center;
+  color: hsl(246, 74%, 41%);
+  font-weight: bold;
+}
+
+.gioco {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 40%;
+  margin: 50px auto;
+  height: 60%;
+}
+.scelta {
+  border-radius: 100%;
+  border: 15px solid;
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.scelta1 {
+  background-image: url(icon-rock.svg);
+  border-color: #000099;
+}
+.scelta2 {
+  background-image: url(icon-paper.svg);
+  border-color: #9e0000;
+}
+.scelta3 {
+  background-image: url(icon-spock.svg);
+  border-color: #b4b400;
+}
+h3 {
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  top: 40%;
+  left: 38%;
+  text-align: center;
+}
+.no-scelta {
+  opacity: 0;
+}
+.scelta-giocatore {
+  position: absolute;
+  top: 32%;
+  left: 3%;
+}
+@keyframes player {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scelta-pc {
+  position: absolute;
+  top: 32% !important;
+  right: 5% !important;
+  animation: pc 3s infinite;
+}
+.scelta-pareggio1,
+.scelta-pareggio2,
+.scelta-pareggio3 {
+  position: absolute;
+  top: 32% !important;
+  right: -10% !important;
+  animation: pc 3s infinite;
+}
+@keyframes pc {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.restart {
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+}
+
+.scelta-pareggio1 {
+  border-radius: 100%;
+  border: 15px solid;
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(icon-rock.svg);
+  border-color: #000099;
+}
+.scelta-pareggio2 {
+  border-radius: 100%;
+  border: 15px solid;
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(icon-paper.svg);
+  border-color: #9e0000;
+}
+.scelta-pareggio3 {
+  border-radius: 100%;
+  border: 15px solid;
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(icon-spock.svg);
+  border-color: #b4b400;
+}
+
+@media (max-width: 767px) {
+  .schermo {
+    width: 100%;
+  }
+  .score {display: none; 
+  }
+  .titolo-gioco {
+    width: 40%;
+    font-size: 10px;
+  }
+  .titolo{font-size: 18px;}
+  .scelta {
+    background-size: 50px;
+    height: 30%;
+  }
+  .gioco {
+    width: 100%;
+  }
+   h3 {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    top: 40%;
+    left: 33%;
+    text-align: center;
+  }
+}
